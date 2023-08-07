@@ -15,17 +15,17 @@ const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
   let allValid = true;
   removeErrors();
-  // allValid = validateInput('text', textFields, validateTextField) && allValid;
-  // if(allValid)
-  // allValid = validateInput('select', SelectBoxes, validateSelectBox) && allValid;
-  // if(allValid)
-  // allValid = validateInput('file', Files, validateFile) && allValid;
-  // if(allValid)
-  // allValid = GenderValidation() && allValid;
-  // if(allValid)
-  // allValid = validateCheckbox("howDidYouHearAboutUs", 2) && allValid;
-  // if(allValid)
-  // allValid = validateCheckbox("terms-details") && allValid;
+  allValid = validateInput('text', textFields, validateTextField) && allValid;
+  if(allValid)
+  allValid = validateInput('select', SelectBoxes, validateSelectBox) && allValid;
+  if(allValid)
+  allValid = validateInput('file', Files, validateFile) && allValid;
+  if(allValid)
+  allValid = GenderValidation() && allValid;
+  if(allValid)
+  allValid = validateCheckbox("howDidYouHearAboutUs", 2) && allValid;
+  if(allValid)
+  allValid = validateCheckbox("terms-details") && allValid;
   if(!allValid) {
     e.preventDefault();
     return false;
